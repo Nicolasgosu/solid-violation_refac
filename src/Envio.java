@@ -1,18 +1,27 @@
+import java.time.*;
 public class Envio {
 
   String tipo;
   Integer precio;
+  Duration tiempoEntrega;
 
-  Envio(String tipo, Integer precio) {
+  Envio(String tipo, Integer precio, Duration tiempoEntrega) {
     this.tipo = tipo;
     this.precio = precio;
+    this.tiempoEntrega = tiempoEntrega;
   }
 
   String getTipoEnvio() {
     return this.tipo;
   }
 
-  void crearTipoEnvio(Envio envio) {
-    //Save Envio DB
+  Integer getPrecio() {
+    return this.precio;
   }
+
+  Duration getTiempoEntrega() {
+    return this.tiempoEntrega;
+  }
+
+  
 }
